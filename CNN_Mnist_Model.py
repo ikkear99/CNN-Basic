@@ -26,10 +26,10 @@ print(val_loss, val_acc)
 
 model.save('Model/my_model.h5')
 new_model = tf.keras.models.load_model('Model/my_model.h5')
-predictions = new_model.predict([x_test])
-print(np.argmax(predictions[0]))
+predictions = new_model.predict(x_test)
+print(np.argmax(predictions[6]))
 
-plt.imshow(x_test[0])
+plt.imshow(x_test[6])
 plt.show()
 
 
